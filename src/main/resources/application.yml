@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #healthCheckPath: ${management.contextPath}/actuator/health
+        #healthCheckInterval: 15s
+        heartbeat:
+          enabled: true
+          ttlValue: 5
+        instanceId: consul-lee
+  application:
+    name: consul-lee
+server:
+  port: 8502
